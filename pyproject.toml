@@ -7,24 +7,23 @@ authors = [
 ]
 dependencies = [
     "python-dotenv>=1.0.1",
-    "notebook>=7.2.0",
     "pyautogen>=0.2.28",
+    "notebook>=7.2.0",
     "openai>=1.30.5",
 ]
-requires-python = ">=3.11.9,<3.13"
-
+requires-python = "<3.12,>=3.11"
 readme = "README.md"
 license = {text = "DataBooth"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 
 [tool.pdm]
 distribution = true
 
 [tool.pdm.dev-dependencies]
-linter = [
+lint = [
     "black[jupyter]>=24.4.2",
 ]
-
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
